@@ -1,0 +1,24 @@
+# bank_system.py
+balance = 10000
+
+while True:
+    print("\n1.Check Balance 2.Deposit 3.Withdraw 4.Exit")
+    choice = input("Enter choice: ")
+    
+    if choice == "1":
+        print(f"Your Balance: Rs.{balance}")
+    elif choice == "2":
+        amount = float(input("Enter deposit amount: "))
+        balance += amount
+        print(f"Deposited! New Balance: Rs.{balance}")
+    elif choice == "3":
+        amount = float(input("Enter withdraw amount: "))
+        if amount <= balance:
+            balance -= amount
+            print(f"Withdrawn! New Balance: Rs.{balance}")
+        else:
+            print("Insufficient Balance!")
+    elif choice == "4":
+        break
+    else:
+        print("Invalid choice")
